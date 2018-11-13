@@ -3,12 +3,10 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { map } from "rxjs/operators";
 import { User } from "../model/user";
 
- // const signupUrl = "https://nba-quiz-api.herokuapp.com/user/signup";
- // const loginUrl = "https://nba-quiz-api.herokuapp.com/user/login";
+ const signupUrl = "https://nba-quiz-api-ns.herokuapp.com/user/signup";
+ const loginUrl = "https://nba-quiz-api-ns.herokuapp.com/user/login";
 
 // http://localhost:3000/
-const signupUrl = "http://localhost:3000/user/signup";
-const loginUrl = "http://localhost:3000/user/login";
 
 @Injectable({
   providedIn: 'root'

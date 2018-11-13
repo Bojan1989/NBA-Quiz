@@ -3,9 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { map } from "rxjs/operators";
 import { Question } from "../model/question";
 
-//const questionUrl = "https://nba-quiz-api.herokuapp.com/question";
-
-const questionUrl = "http://localhost:3000/question";
+const questionUrl = "https://nba-quiz-api-ns.herokuapp.com/question";
 
 @Injectable({
   providedIn: 'root'

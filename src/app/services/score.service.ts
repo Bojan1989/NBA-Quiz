@@ -3,12 +3,10 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { map } from "rxjs/operators";
 import { Score } from "../model/score";
 
- // const scoreUrl = "https://nba-quiz-api.herokuapp.com/score";
- // const userScoreUrl = "https://nba-quiz-api.herokuapp.com/score/user";
+ const scoreUrl = "https://nba-quiz-api-ns.herokuapp.com/score";
+ const userScoreUrl = "https://nba-quiz-api-ns.herokuapp.com/score/user";
 
 // http://localhost:3000/
-const scoreUrl = "http://localhost:3000/score";
-const userScoreUrl = "http://localhost:3000/score/user";
 
 @Injectable({
   providedIn: 'root'
