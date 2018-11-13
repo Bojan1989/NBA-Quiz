@@ -1,0 +1,45 @@
+<div class="quiz">
+
+  <div class="quiz-heading">
+    <h2>Kviz</h2>
+  </div>
+
+  <div class="quiz-content">
+
+    <div class="gameStart" *ngIf="!gameStarted">
+      <button type="button" name="start" (click)="startGame()">Pocnite Igru</button>
+    </div>
+
+    <ng-container *ngIf="!gameOver">
+      <ng-container *ngIf="gameStarted">
+        <div class="gamePlay" *ngIf="activeQuestion">
+          <div class="gamePlay-question">
+            <h4>{{qNum}}.{{activeQuestion.question}}</h4>
+          </div>
+          <div class="gamePlay-options">
+            <button type="button" name="option1" (click)="countScore(activeQuestion.answer, randomOptions[0])">{{randomOptions[0]}}</button>
+            <button type="button" name="option2" (click)="countScore(activeQuestion.answer, randomOptions[1])">{{randomOptions[1]}}</button>
+            <button type="button" name="option3" (click)="countScore(activeQuestion.answer, randomOptions[2])">{{randomOptions[2]}}</button>
+            <button type="button" name="option4" (click)="countScore(activeQuestion.answer, randomOptions[3])">{{randomOptions[3]}}</button>
+          </div>
+          <div class="gamePlay-score">
+            <p>Rezultat: {{score.score}}</p>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <div class="gameScore" *ngIf="gameOver">
+      <button type="button" name="button" (click)="saveScore()">Sacuvaj rezultat</button>
+      <br>
+      <button type="button" name="finish" (click)="startGame()">Play Again</button>
+      <br>
+      <br>
+      <h3>{{score.username}} Your score is {{score.score}}</h3>
+    </div>
+
+  </div>
+
+</div>
+
+<!--                 -->

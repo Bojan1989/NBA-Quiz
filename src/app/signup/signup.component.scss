@@ -1,0 +1,39 @@
+.formWraper {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr;
+  height: 80vh;
+
+  .loginForm {
+    justify-self: center;
+    align-self: center;
+
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    input {
+      width: 350px;
+      padding: 7px 10px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: none;
+    }
+    input:focus {
+      outline-style: none;
+    }
+
+    .buttons {
+      text-align: center;
+      button {
+        margin: 10px;
+        padding: 7px 10px;
+        width: 120px;
+        border-radius: 10px;
+        border: none;
+        background-color: #hhh;
+      }
+    }
+  }
+}

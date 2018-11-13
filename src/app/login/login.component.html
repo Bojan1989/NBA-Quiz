@@ -1,0 +1,16 @@
+  <div class="formWraper">
+    <form class="loginForm" #loginUserForm="ngForm" novalidate>
+      <h2>LogIN</h2>
+      <div>
+        <input name="username" type="text" placeholder="Username" [(ngModel)]="user.username">
+      </div>
+      <div>
+        <input name="password" type="password" placeholder="Password" [(ngModel)]="user.password">
+      </div>
+      <div class="buttons">
+        <button type="submit" (click)="login()">Login</button>
+        <br>
+        <button routerLink="/signup" routerLinkActive ="active">SignUp</button>
+      </div>
+    </form>
+  </div>

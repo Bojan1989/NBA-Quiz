@@ -1,0 +1,21 @@
+<h2>Remove Question</h2>
+<br>
+<button type="button" name="refresh" (click)="refreshList()">Refresh List</button>
+<br>
+<br>
+<div class="" *ngIf="questions">
+  <ngb-accordion #acc="ngbAccordion" *ngFor="let q of questions.questions">
+    <ngb-panel title={{q.question}}>
+      <ng-template ngbPanelContent>
+        <ul>
+          <li><b>{{q.answer}}</b></li>
+          <li>{{q.options.option3}}</li>
+          <li>{{q.options.option2}}</li>
+          <li>{{q.options.option1}}</li>
+        </ul>
+        <br>
+        <button type="button" name="button" (click)="deleteQuestion(q._id)">Delete this Question</button>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>

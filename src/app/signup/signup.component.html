@@ -1,0 +1,17 @@
+<div class="formWraper">
+  <form class="loginForm" #addUserForm="ngForm" novalidate>
+    <h2>Napravi profil</h2>
+    <div>
+      <input name="username" type="text" placeholder="Username" [(ngModel)]="user.username">
+    </div>
+    <div>
+      <input name="password" type="password" placeholder="Password" [(ngModel)]="user.password">
+    </div>
+    <div class="buttons">
+      <br>
+      <button (click)="saveUser()">Kreiraj profil</button>
+      <br>
+      <button routerLink="/login" routerLinkActive ="active">Go to Login</button>
+    </div>
+  </form>
+</div>
