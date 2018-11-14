@@ -43,7 +43,7 @@ export class GameComponent implements OnInit {
   }
 
   setActiveQuestion(){
-    if (this.qNum <= 4) {
+    if (this.qNum <= 14) {
       this.qNum ++;
       this.activeQuestion = this.questions[this.qNum];
       this.options = [];
