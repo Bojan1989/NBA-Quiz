@@ -14,7 +14,7 @@
     }
 
     input {
-      width: 350px;
+      width: 250px;
       padding: 7px 10px;
       margin: 10px;
       border-radius: 10px;
@@ -33,6 +33,14 @@
         border-radius: 10px;
         border: none;
         background-color: #hhh;
+      }
+      button:focus {
+        outline: 0;
+        outline-style: none;
+      }
+      button:active {
+        outline: 0;
+        border: none;
       }
     }
   }

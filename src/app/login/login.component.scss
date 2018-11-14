@@ -14,11 +14,13 @@
     }
 
     input {
-      width: 350px;
+      width: 250px;
       padding: 7px 10px;
       margin: 10px;
       border-radius: 10px;
       box-shadow: none;
+      outline-style: none;
+
     }
     input:focus {
       outline-style: none;
@@ -32,7 +34,16 @@
         width: 120px;
         border-radius: 10px;
         border: none;
-        background-color: #hhh;
+        background-color: #696969;
+        color: #fff;
+      }
+      button:focus {
+        outline: 0;
+        outline-style: none;
+      }
+      button:active {
+        outline: 0;
+        border: none;
       }
     }
   }

@@ -1,21 +1,24 @@
 .navigation {
-  width: 80vw;
+  width: 95%;
   margin-right: auto;
   margin-left: auto;
 
   .navigation-list {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 10px;
     margin: 0;
   }
 
   li {
-    display: inline-block;
+    //display: inline-block;
+    list-style: none;
     text-align: center;
     align-self: center;
     a {
+      font-weight: bolder;
+      color: #000;
       text-decoration: none;
     }
   }

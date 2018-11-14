@@ -1,18 +1,18 @@
-<h2>Add new Question</h2>
+<h3>Add new Question</h3>
 <form #addQuestionFrom="ngForm" novalidate>
-  <br><br>
+  <br>
+  <h5>Question text</h5>
   <div>
-    <h5>Question text</h5>
     <input name="question" type="text" placeholder="Question text" [(ngModel)]="question.question" required>
   </div>
   <br><br>
+  <h5>Correct Answer</h5>
   <div>
-    <h5>Correct Answer</h5>
     <input name="answer" type="text" placeholder="Correct Answer" [(ngModel)]="question.answer" [(ngModel)]="question.options.option4" required>
   </div>
   <br><br>
+  <h5>Add Options</h5>
   <div>
-    <h5>Add Options</h5>
     <input name="option1" type="text" placeholder="Option" [(ngModel)]="question.options.option1" required>
   </div>
   <div>
@@ -21,7 +21,6 @@
   <div>
     <input name="option3" type="text" placeholder="Option" [(ngModel)]="question.options.option3" required>
   </div>
-
   <div>
     <br>
     <button type="submit" (click)="saveQuestion();addQuestionFrom.reset()" [disabled]="addQuestionFrom.form.invalid">Add Question</button>

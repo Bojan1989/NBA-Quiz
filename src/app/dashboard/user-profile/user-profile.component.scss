@@ -1,7 +1,7 @@
 .profile {
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-row-gap: 50px;
+  grid-row-gap: 10px;
 }
 
 .profile-heading {
@@ -12,12 +12,23 @@
 }
 
 .profile-content {
-  padding: 100px;
+  p {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+  padding: 5px;
   display: grid;
   grid-template-rows: auto 1fr;
   grid-row-gap: 20px;
   ul {
     place-self: center;
     list-style: none;
+    li {
+      padding: 5px;
+      span {
+        font-weight: 500;
+        margin-right: 20px;
+      }
+    }
   }
 }

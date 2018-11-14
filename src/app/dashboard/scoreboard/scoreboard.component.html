@@ -1,5 +1,6 @@
-<div class="" *ngIf="response">
-  <ul *ngFor="let item of response">
-    <li>{{item.username}}: {{item.score}}</li>
+<div class="scoreboard-wraper" *ngIf="response">
+  <h5>TABELA</h5>
+  <ul>
+    <li *ngFor="let item of response; let i = index"><span>{{i + 1}}.</span> {{item.username}}:   {{item.score}}</li>
   </ul>
 </div>

@@ -1,7 +1,7 @@
 <div class="quiz">
 
   <div class="quiz-heading">
-    <h2>Kviz</h2>
+    <h3>NBA</h3>
   </div>
 
   <div class="quiz-content">
@@ -14,7 +14,7 @@
       <ng-container *ngIf="gameStarted">
         <div class="gamePlay" *ngIf="activeQuestion">
           <div class="gamePlay-question">
-            <h4>{{qNum}}.{{activeQuestion.question}}</h4>
+            <h5><span>{{qNum}}.</span>{{activeQuestion.question}}</h5>
           </div>
           <div class="gamePlay-options">
             <button type="button" name="option1" (click)="countScore(activeQuestion.answer, randomOptions[0])">{{randomOptions[0]}}</button>
@@ -32,10 +32,10 @@
     <div class="gameScore" *ngIf="gameOver">
       <button type="button" name="button" (click)="saveScore()">Sacuvaj rezultat</button>
       <br>
-      <button type="button" name="finish" (click)="startGame()">Play Again</button>
+      <button type="button" name="finish" (click)="startGame()">Igraj ponovo</button>
       <br>
       <br>
-      <h3>{{score.username}} Your score is {{score.score}}</h3>
+      <h3>{{score.username}} Tvoj rezultat je {{score.score}}</h3>
     </div>
 
   </div>

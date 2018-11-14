@@ -1,14 +1,19 @@
 .quiz {
   width: 100%;
   display: grid;
-  grid-template-rows: 2fr 5fr;
-  grid-row-gap: 30px;
+  grid-template-rows: auto 5fr;
+  grid-row-gap: 20px;
 }
 
 .quiz-heading {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
+  h3 {
+    width: 40%;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+  }
 }
 
 .quiz-content {
@@ -35,10 +40,16 @@
   .gamePlay {
     display: grid;
     text-align: center;
-    grid-auto-rows: 1fr 5fr;
+    grid-auto-rows: 1fr auto;
 
     .gamePlay-question {
       text-align: center;
+      span {
+        font-size: 1.2em;
+        padding: 3px;
+        border-radius: 2px;
+        margin-right: 5px;
+      }
     }
 
     .gamePlay-options {
@@ -46,25 +57,26 @@
       margin-left: auto;
       margin-right: auto;
       display: grid;
-      grid-column-gap: 30px;
-      grid-template-areas: "option1 option2" "option3 option4";
+      grid-row-gap: 15px;
+      grid-template-areas: "option1" "option2" "option3" "option4";
 
       button {
         place-self: center;
+        font-weight: 600;
         width: 200px;
         height: 50px;
         border-radius: 10px;
         border: none;
-        color: white;
+        color: #000;
         background-color: #hhh;
-        &:hover {
-          background-color: white;
-          color: #999;
-        }
+        // &:hover {
+        //   background-color: white;
+        //   color: #999;
+        // }
       }
     }
     .gamePlay-score {
-      font-style: italic;  
+      font-style: italic;
     }
   }
 }
@@ -78,4 +90,13 @@
     border: none;
     background-color: #hhh;
   }
+}
+
+button:focus {
+  outline: 0;
+  outline-style: none;
+}
+button:active {
+  outline: 0;
+  border: none;
 }
