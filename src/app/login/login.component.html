@@ -1,11 +1,11 @@
   <div class="formWraper">
     <form class="loginForm" #loginUserForm="ngForm" novalidate>
-      <h2>LogIN</h2>
+      <h1>LogIN</h1>
       <div>
-        <input name="username" type="text" placeholder="Username" [(ngModel)]="user.username">
+        <input name="username" type="text" placeholder="Username..." [(ngModel)]="user.username" autocomplete="off">
       </div>
       <div>
-        <input name="password" type="password" placeholder="Password" [(ngModel)]="user.password">
+        <input name="password" type="password" placeholder="Password..." [(ngModel)]="user.password" autocomplete="off">
       </div>
       <div class="buttons">
         <button type="submit" (click)="login()">Login</button>

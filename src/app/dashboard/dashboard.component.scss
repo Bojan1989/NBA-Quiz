@@ -3,7 +3,9 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-row-gap: 10px;
-  padding: 5px 10px;
+  background-image: url("../../assets/images/dark-bg.jpg");
+  background-repeat:no-repeat;
+  background-size: contain;
 
   .dashboard-navigation {
     align-self: stretch;

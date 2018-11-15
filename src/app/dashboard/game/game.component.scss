@@ -11,8 +11,9 @@
   text-transform: uppercase;
   h3 {
     width: 40%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #fff;
     margin: 0 auto;
+    color: #fff
   }
 }
 
@@ -44,6 +45,7 @@
 
     .gamePlay-question {
       text-align: center;
+      color: #fff;
       span {
         font-size: 1.2em;
         padding: 3px;
@@ -74,9 +76,14 @@
         //   color: #999;
         // }
       }
+      button:active {
+        background-color: rgb(229,138,48);
+        color: #fff;
+      }
     }
     .gamePlay-score {
       font-style: italic;
+      color: #fff;
     }
   }
 }
@@ -88,15 +95,15 @@
     padding: 10px 15px;
     border-radius: 10px;
     border: none;
+    color: rgb(229,138,48);
     background-color: #hhh;
   }
 }
-
-button:focus {
-  outline: 0;
-  outline-style: none;
-}
-button:active {
-  outline: 0;
-  border: none;
-}
+  button:focus {
+    outline: 0;
+    outline-style: none;
+  }
+  button:active {
+    background-color: rgb(229,138,48);
+    color: #fff;
+  }

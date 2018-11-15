@@ -59,7 +59,9 @@ export class GameComponent implements OnInit {
     if (correct == answer) {
       this.score.score = this.score.score + 10;
     }
-    this.setActiveQuestion();
+    setTimeout(() => {
+      this.setActiveQuestion();
+    }, 300);
   }
 
   startGame() {
