@@ -4,8 +4,8 @@
   grid-template-rows: auto 1fr auto;
   grid-row-gap: 10px;
   background-image: url("../../assets/images/dark-bg.jpg");
-  background-repeat:no-repeat;
-  background-size: cover;
+  background-size: auto;
+  overflow: hidden;
 
   .dashboard-navigation {
     align-self: stretch;
