@@ -1,113 +1,118 @@
-.quiz {
-  width: 100%;
-  display: grid;
-  grid-template-rows: auto 5fr;
-  grid-row-gap: 20px;
-}
+@import "../../../styles/_variables.scss";
+@import "../../../styles/mixins.scss";
 
-.quiz-heading {
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  h3 {
-    width: 40%;
-    border-bottom: 1px solid #fff;
-    margin: 0 auto;
-    color: #fff
+@include sm {
+  .quiz {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 5fr;
+    grid-row-gap: 20px;
   }
-}
 
-.quiz-content {
-  width: 100%;
-  align-content: center;
-
-  .gameStart {
+  .quiz-heading {
     width: 100%;
     text-align: center;
-    button {
-      text-transform: uppercase;
-      margin: 10px;
-      padding: 10px 15px;
-      border-radius: 10px;
-      border: none;
-      background-color: #hhh;
-      &:hover {
-        background-color: white;
-        color: #999;
-      }
+    text-transform: uppercase;
+    h3 {
+      width: 40%;
+      border-bottom: 1px solid #fff;
+      margin: 0 auto;
+      color: #fff
     }
   }
 
-  .gamePlay {
-    display: grid;
-    text-align: center;
-    grid-auto-rows: 1fr auto;
+  .quiz-content {
+    width: 100%;
+    align-content: center;
 
-    .gamePlay-question {
+    .gameStart {
+      width: 100%;
       text-align: center;
-      color: #fff;
-      span {
-        font-size: 1.2em;
-        padding: 3px;
-        border-radius: 2px;
-        margin-right: 5px;
-      }
-    }
-
-    .gamePlay-options {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      display: grid;
-      grid-row-gap: 15px;
-      grid-template-areas: "option1" "option2" "option3" "option4";
-
       button {
-        place-self: center;
-        font-weight: 600;
-        width: 200px;
-        height: 50px;
+        text-transform: uppercase;
+        margin: 10px;
+        padding: 10px 15px;
         border-radius: 10px;
         border: none;
-        color: #000;
         background-color: #hhh;
         // &:hover {
         //   background-color: white;
         //   color: #999;
         // }
       }
-      button:active {
-        background-color: rgb(229,138,48);
+    }
+
+    .gamePlay {
+      display: grid;
+      text-align: center;
+      grid-auto-rows: 1fr auto;
+
+      .gamePlay-question {
+        text-align: center;
+        color: #fff;
+        span {
+          font-size: 1.2em;
+          padding: 3px;
+          border-radius: 2px;
+          margin-right: 5px;
+        }
+      }
+
+      .gamePlay-options {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-row-gap: 15px;
+        grid-template-areas: "option1" "option2" "option3" "option4";
+
+        button {
+          place-self: center;
+          font-weight: 600;
+          width: 200px;
+          height: 50px;
+          border-radius: 10px;
+          border: none;
+          color: #000;
+          background-color: #hhh;
+          // &:hover {
+          //   background-color: white;
+          //   color: #999;
+          // }
+        }
+        button:active {
+          background-color: rgb(229,138,48);
+          color: #fff;
+        }
+      }
+      .gamePlay-score {
+        font-style: italic;
         color: #fff;
       }
     }
-    .gamePlay-score {
-      font-style: italic;
+  }
+
+  .gameScore {
+    button {
+      text-transform: uppercase;
+      margin: 10px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: none;
+      color: rgb(229,138,48);
+      background-color: #hhh;
+    }
+    h3{
       color: #fff;
+      padding: 20px;
     }
   }
-}
-
-.gameScore {
-  button {
-    text-transform: uppercase;
-    margin: 10px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: none;
-    color: rgb(229,138,48);
-    background-color: #hhh;
-  }
-  h3{
-    color: #fff;
-    padding: 20px;
-  }
-}
-  button:focus {
-    outline: 0;
-    outline-style: none;
-  }
-  button:active {
-    background-color: rgb(229,138,48);
-    color: #fff;
-  }
+    button:focus {
+      outline: 0;
+      outline-style: none;
+    }
+    button:active {
+      background-color: rgb(229,138,48);
+      color: #fff;
+    }
+};

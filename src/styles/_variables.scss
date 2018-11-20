@@ -1,1 +1,16 @@
-$main: blue;
+
+// smartphone
+$screen-sm-min: 320px;
+$screen-sm-max: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 577px;
+$screen-md-max: 620px;
+
+// Tablets and small desktops
+$screen-lg-min: 621px;
+$screen-lg-max: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 993px;
+$screen-xl-max: 1800px;

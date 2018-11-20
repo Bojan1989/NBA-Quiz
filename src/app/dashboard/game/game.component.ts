@@ -71,7 +71,7 @@ export class GameComponent implements OnInit {
       this.score.score = 0;
       this.gameStarted = true;
       this.gameOver = false;
-    }, 200);
+    }, 400);
   }
 
   saveScore(){

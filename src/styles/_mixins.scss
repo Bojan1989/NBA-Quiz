@@ -1,0 +1,218 @@
+//---------- Main Reset ----------//
+@mixin main {
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: $main-text-color;
+    font-family: $main-font;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+//---------- Webkit & Moz Fix ----------//
+@mixin webkit-fix {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -moz-margin-start: 0;
+  -webkit-margin-end: 0;
+  -moz-margin-end: 0;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+}
+
+//---------- List Reset ----------//
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+//---------- Table Fix ----------//
+@mixin table-fix {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//---------- Clearfix ----------//
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//---------- Breakpoints For Each Query ----------//
+// Small devices
+@mixin sm {
+  @media only screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+  @media only screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-xl-max}) {
+       @content;
+   }
+}
+
+
+//---------- Absolute Centering ----------//
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'y' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } @else if $position == 'x' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translate(-50%);
+  } @else if $position == 'both' {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+//---------- Opacity ----------//
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opacity = $opacity * 100);
+}
+
+//---------- Center-align a block level element ----------//
+//--- Requires width or max-width to be set ---//
+@mixin centerBlock {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//---------- Absolute Positioned ----------//
+@mixin absPos($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+//---------- Font Size ----------//
+//--- This mixin sets the font size in rem's with a px fallback ---//
+@mixin fontSize($size-value: 16) {
+  font-size: $size-value + px;
+  font-size: .125 * $size-value + rem;
+}
+
+//---------- Line Height ----------//
+//--- This mixin sets the line height in rem's with a px fallback ---//
+@mixin lineHeight($height-value: 16) {
+  line-height: $height-value + px;
+  line-height: $height-value / 16 + rem;
+}
+
+//---------- Ghost Vertical Align ----------//
+//--- For vertically centering elements with a dynamic size ---//
+@mixin ghostVerticalAlign {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: .1px;
+  }
+}
+
+//---------- Column Count ----------//
+@mixin columnCount($col) {
+  -webkit-column-count: $col;
+  column-count: $col;
+}
+
+//---------- Column Gap ----------//
+@mixin columnGap($gap) {
+  -webkit-column-gap: $gap;
+  column-gap: $gap;
+}
+
+//---------- Column Fill ----------//
+@mixin columnFill($fill: balance) {
+  -webkit-column-fill: $fill;
+  column-fill: $fill;
+}
+
+//---------- Column Rule ----------//
+@mixin columnRule($width: 1px, $style: solid, $color: #000) {
+  -webkit-column-rule: $width $style $color;
+  column-rule: $width $style $color;
+}
+
+//---------- Box Shadow ----------//
+@mixin boxShadow($horiz: .5em, $vert: .5em, $blur: 0, $spread: 0, $color: #000) {
+  -webkit-box-shadow: $horiz $vert $blur $spread $color;
+  box-shadow: $horiz $vert $blur $spread $color;
+}
+
+//---------- Fullscreen Background Image ----------//
+@mixin bgCover($url) {
+  background: url($url) no-repeat center center fixed;
+  background-size: cover;
+}
+
+//---------- Full Width / Height And Centered Image ----------//
+//--- Position an image within it's parent element so that it takes up ---//
+//--- the full height and width of the parent element, ---//
+//--- and is positioned with its center in the middle) ---//
+@mixin imgCover {
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+//---------- Hiding Elements ----------//
+@mixin visuallyHidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+//---------- Background Gradient ----------//
+@mixin gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+
+  @if $orientation == 'vertical' {
+    background: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  } @else if $orientation == 'horizontal' {
+    background: -webkit-gradient(linear, left top, right top, from($start-color), to($end-color));
+    background: linear-gradient(to right, $start-color, $end-color);
+  } @else {
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}

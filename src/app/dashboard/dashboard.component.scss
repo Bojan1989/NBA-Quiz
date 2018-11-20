@@ -1,23 +1,55 @@
-.dashboard {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-row-gap: 10px;
-  background-image: url("../../assets/images/dark-bg.jpg");
-  background-size: auto;
-  overflow: hidden;
+@import "../../styles/_variables.scss";
+@import "../../styles/mixins.scss";
 
-  .dashboard-navigation {
-    align-self: stretch;
-    margin: 5px;
-  }
+@include sm {
+  .dashboard {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-row-gap: 10px;
+    background-image: url("../../assets/images/dark-bg.jpg");
+    background-size: auto;
+    overflow: hidden;
 
-  .dashboard-content {
-    align-self: stretch;
-    width: 100%;
-  }
+    .dashboard-navigation {
+      align-self: stretch;
+      margin: 5px;
+    }
 
-  .dashboard-footer {
-    color: #fff;
+    .dashboard-content {
+      align-self: stretch;
+      width: 100%;
+    }
+
+    .dashboard-footer {
+      color: #fff;
+    }
   }
 }
+
+@include lg {
+  .dashboard {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-row-gap: 10px;
+    background-image: url("../../assets/images/dark-bg.jpg");
+    background-size: cover;
+    overflow: hidden;
+    padding: 10px 30px;
+
+    .dashboard-navigation {
+      align-self: stretch;
+      margin: 5px;
+    }
+
+    .dashboard-content {
+      align-self: stretch;
+      width: 100%;
+    }
+
+    .dashboard-footer {
+      color: #fff;
+    }
+  }
+};
